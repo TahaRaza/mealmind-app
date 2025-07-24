@@ -1,0 +1,44 @@
+{
+  "name": "mealmind-app",
+  "version": "1.0.0",
+  "description": "Full-stack recipe recommendation app with ingredient matching and family meal planning",
+  "main": "index.js",
+  "scripts": {
+    "install-all": "npm install && cd frontend && npm install && cd ../backend && npm install",
+    "dev": "concurrently \"npm run backend:dev\" \"npm run frontend:dev\"",
+    "backend:dev": "cd backend && npm run dev",
+    "frontend:dev": "cd frontend && npm start",
+    "backend:start": "cd backend && npm start",
+    "backend:seed": "cd backend && npm run seed",
+    "test": "npm run backend:test && npm run frontend:test",
+    "backend:test": "cd backend && npm test",
+    "frontend:test": "cd frontend && npm test",
+    "build": "npm run backend:build && npm run frontend:build",
+    "backend:build": "cd backend && npm run build",
+    "frontend:build": "cd frontend && npm run build"
+  },
+  "workspaces": ["frontend", "backend"],
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "keywords": [
+    "recipe",
+    "food",
+    "meal-planning",
+    "react-native",
+    "nodejs",
+    "mongodb",
+    "ingredient-matching",
+    "family-cooking"
+  ],
+  "author": "TahaRaza",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TahaRaza/mealmind-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TahaRaza/mealmind-app/issues"
+  },
+  "homepage": "https://github.com/TahaRaza/mealmind-app#readme"
+}
